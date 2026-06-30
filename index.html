@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport " content="width=device-width, initial-scale=1.0">
+    <title> ViaTechnology Technology Services | Integrated Engineering & Technology Solutions</title>
+    <meta name="description" content="Viateur technology platform services  - Precision, innovation, and efficiency powering enterprises toward measurable growth through engineering and IT solutions.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        ics: {
+                            primary: '#0f172a',
+                            secondary: '#1e40af',
+                            accent: '#3b82f6',
+                            light: '#f8fafc',
+                            dark: '#020617'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 64, 175, 0.85) 100%);
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.2);
+        }
+        .animate-fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animate-fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+body {
+	padding: 2rem;
+	font-family: -apple-system, BlinkMacSystemFont, "Arial", sans-serif;
+}
+
+h1 {
+	font-size: 16px;
+	margin-top: 0;
+}
+
+p {
+	color: rgb(107, 114, 128);
+	font-size: 15px;
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+
+.card {
+	max-width: 620px;
+	margin: 0 auto;
+	padding: 16px;
+	border: 1px solid lightgray;
+	border-radius: 16px;
+}
+
+.card p:last-child {
+	margin-bottom: 0;
+}
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                        ICS
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-slate-900 text-lg leading-tight">ViateurTechnology Services</span>
+                        <span class="text-xs text-slate-500 uppercase tracking-wider">Viateur Neural</span>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="#engineering" class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Engineering with ViaTechnology</a>
+                    <a href="#technology" class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Technology with ViaTechnology</a>
+                    <a href="#solutions" class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Solutions with ViaTechnology</a>
+                    <a href="#industries" class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Industries  with ViaTechnology</a>
+                    <a href="#contact" class="ml-4 px-6 py-2.5 bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-sm font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300">
+                        Talk to an Expert with ViaTechnology
+                    </a>
+                </div>
+
+                <button class="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100" id="mobile-menu-button">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden bg-white border-t border-slate-200" id="mobile-menu">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#engineering" class="block px-3 py-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg">Engineering Services with ViaTechnology</a>
+                <a href="#technology" class="block px-3 py-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg">Technology Services with ViaTechnology </a>
+                <a href="#solutions" class="block px-3 py-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg">Enterprise Solutions with ViaTechnology </a>
+                <a href="#industries" class="block px-3 py-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg">Industries with ViaTechnology</a>
+                <a href="#contact" class="block px-3 py-2 text-blue-600 font-semibold hover:bg-blue-50 rounded-lg">Contact Expert with ViaTechnology</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <div class="absolute inset-0 z-0">
+            <img src="http://static.photos/technology/1920x1080/1" alt="Technology Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-gradient"></div>
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.05\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-blue-100 text-sm font-medium mb-8 animate-fade-up">
+                <i data-lucide="sparkles" class="w-4 h-4"></i>
+                <span>Enterprise Excellence Delivered with ViaTechnology </span>
+            </div>
+            
+            <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight mb-6 animate-fade-up" style="transition-delay: 100ms;">
+                Integrated Engineering &<br>
+                <span class="bg-gradient-to-r from-cyan-300 to-blue-200 bg-clip-text text-transparent">Technology Solutions </span><br>
+                for Next-Level Business Performance
+            </h1>with ViaTechnology
+            
+            <p class="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto mb-10 leading-relaxed animate-fade-up" style="transition-delay: 200ms;">
+                Precision, innovation, and efficiency — powering enterprises toward measurable growth.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-up" style="transition-delay: 300ms;">
+                <a href="#contact" class="group px-8 py-4 bg-white text-blue-900 rounded-full font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2">
+                    Start Your Transformation Today with ViaTechnology
+                    <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <a href="#engineering" class="px-8 py-4 glass-effect text-white rounded-full font-semibold text-lg hover:bg-white/20 transition-all duration-300 flex items-center gap-2">
+                    Explore Solutions
+                    <i data-lucide="chevron-down" class="w-5 h-5"></i>
+                </a>
+            </div>
+
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto animate-fade-up" style="transition-delay: 400ms;">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-white mb-1">20+</div>
+                    <div class="text-sm text-blue-200">Years Experience</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-white mb-1">500+</div>
+                    <div class="text-sm text-blue-200">Projects Delivered</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-white mb-1">98%</div>
+                    <div class="text-sm text-blue-200">Client Satisfaction</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-white mb-1">24/7</div>
+                    <div class="text-sm text-blue-200">Expert Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commitment Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center animate-fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6"> ViaTechnology Our Commitment to Enterprise Excellence</h2>
+                <p class="text-lg text-slate-600 leading-relaxed mb-8">
+                    ViaTechnology builds solutions that solve the industry's toughest engineering and operational problems. We design, build, and integrate systems that simplify complexity—from enhancing manufacturing workflows to upgrading legacy technologies through our IT modernization services. With a sharp focus on precision and practicality, we make it possible for businesses to operate more efficiently, reduce operational hurdles, and cut through the noise of constant technological change. As a leader in digital transformation services, we ensure your business is ready for the future.
+                </p>
+                <a href="#solutions" class="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors group">
+                    Explore Our Enterprise Solutions
+                    <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Engineering Services -->
+    <section id="engineering" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-fade-up">
+                <span class="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-4">Engineering Design</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-4">Integrated Engineering Design Services with ViaTechnology</h2>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto">Precision-engineered solutions for complex industrial challenges</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- BIM -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 card-hover animate-fade-up">
+                    <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="building-2" class="w-7 h-7 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Building Information Modeling (BIM)</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Our Building information modeling (BIM) services bring precision and efficiency to every construction project. By digitizing project planning, design, and execution, we help organizations minimize errors, reduce costs, and streamline timelines.
+                    </p>
+                    <a href="#" class="inline-flex items-center text-blue-600 font-semibold text-sm hover:gap-2 transition-all group">
+                        Read More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Engineering and CAD -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 card-hover animate-fade-up" style="transition-delay: 100ms;">
+                    <div class="w-14 h-14 bg-indigo-50 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="pen-tool" class="w-7 h-7 text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Engineering and CAD</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        We provide end-to-end product design and CAD modeling services tailored to mechanical, industrial, and manufacturing operations. From concept development to production-ready designs, our teams deliver highly accurate, efficient, and reliable results.
+                    </p>
+                    <a href="#" class="inline-flex items-center text-indigo-600 font-semibold text-sm hover:gap-2 transition-all group">
+                        Read More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Lightning Protection -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 card-hover animate-fade-up" style="transition-delay: 200ms;">
+                    <div class="w-14 h-14 bg-amber-50 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="zap" class="w-7 h-7 text-amber-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Lightning Protection Design</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Protect critical assets and infrastructure with our custom lightning protection design services. We conduct thorough lightning risk assessments and design LPS (Lightning Protection System) solutions that safeguard personnel, equipment, and structures.
+                    </p>
+                    <a href="#" class="inline-flex items-center text-amber-600 font-semibold text-sm hover:gap-2 transition-all group">
+                        Read More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Manufacturing Engineering -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 card-hover animate-fade-up">
+                    <div class="w-14 h-14 bg-emerald-50 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="factory" class="w-7 h-7 text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Manufacturing Engineering</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Our Manufacturing engineering services are designed to transform production processes. From process optimization to product design, we provide comprehensive industrial engineering consulting services and digital engineering services.
+                    </p>
+                    <a href="#" class="inline-flex items-center text-emerald-600 font-semibold text-sm hover:gap-2 transition-all group">
+                        Read More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Gear Design -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 card-hover animate-fade-up" style="transition-delay: 100ms;">
+                    <div class="w-14 h-14 bg-rose-50 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="cog" class="w-7 h-7 text-rose-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Gear Design</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        With over two decades of experience, we deliver precision gear design and mechanical engineering services for specialized industrial applications. Our team combines innovation, technical expertise, and meticulous engineering.
+                    </p>
+                    <a href="#" class="inline-flex items-center text-rose-600 font-semibold text-sm hover:gap-2 transition-all group">
+                        Read More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Utilities & Infrastructure -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 card-hover animate-fade-up" style="transition-delay: 200ms;">
+                    <div class="w-14 h-14 bg-cyan-50 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="network" class="w-7 h-7 text-cyan-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Utilities & Infrastructure</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        We provide utilities and infrastructure engineering services that enhance infrastructure reliability and efficiency. Whether it's utilities, energy systems, or industrial support structures, our designs are robust and scalable.
+                    </p>
+                    <a href="#" class="inline-flex items-center text-cyan-600 font-semibold text-sm hover:gap-2 transition-all group">
+                        Read More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-flex items-center gap-2 px-8 py-4 bg-slate-900 text-white rounded-full font-semibold hover:bg-slate-800 transition-all hover:shadow-lg">
+                    Talk to an with ViaTechnology Expert Today
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Services -->
+    <section id="technology" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-fade-up">
+                <span class="inline-block px-4 py-1.5 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold mb-4">Digital Solutions</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-4">Enterprise Technology Services</h2>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto">Transformative IT solutions for modern business operations</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Managed IT -->
+                <div class="relative group bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border border-slate-200 overflow-hidden card-hover animate-fade-up">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-100 rounded-full -mr-16 -mt-16 opacity-50 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-blue-200">
+                            <i data-lucide="server" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Managed IT Services</h3>
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            Maintain secure, high-performing IT systems with our end-to-end managed IT services. From network infrastructure services to proactive IT infrastructure design and management.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-blue-600 font-semibold text-sm hover:gap-2 transition-all">
+                            Read More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- AI & Analytics -->
+                <div class="relative group bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border border-slate-200 overflow-hidden card-hover animate-fade-up" style="transition-delay: 100ms;">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-purple-100 rounded-full -mr-16 -mt-16 opacity-50 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 bg-purple-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-purple-200">
+                            <i data-lucide="brain" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">AI & Analytics</h3>
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            Leverage data-driven insights to make informed decisions and identify opportunities for improvement. Our business intelligence and analytics services, including expert Power BI consulting services.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-purple-600 font-semibold text-sm hover:gap-2 transition-all">
+                            Read More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cybersecurity -->
+                <div class="relative group bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border border-slate-200 overflow-hidden card-hover animate-fade-up" style="transition-delay: 200ms;">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-red-100 rounded-full -mr-16 -mt-16 opacity-50 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 bg-red-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-red-200">
+                            <i data-lucide="shield-check" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Cybersecurity</h3>
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            Protect critical assets and sensitive information with our cybersecurity services for enterprises. We implement managed cybersecurity services and comprehensive risk management strategies.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-red-600 font-semibold text-sm hover:gap-2 transition-all">
+                            Read More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cloud Solutions -->
+                <div class="relative group bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border border-slate-200 overflow-hidden card-hover animate-fade-up">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-sky-100 rounded-full -mr-16 -mt-16 opacity-50 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 bg-sky-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-sky-200">
+                            <i data-lucide="cloud" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Cloud Solutions</h3>
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            We design and implement hybrid and enterprise cloud solutions to enhance scalability, operational flexibility, and system integration. Our cloud consulting and cloud services include assessment and migration.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-sky-600 font-semibold text-sm hover:gap-2 transition-all">
+                            Read More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Digital Transformation -->
+                <div class="relative group bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border border-slate-200 overflow-hidden card-hover animate-fade-up" style="transition-delay: 100ms;">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-teal-100 rounded-full -mr-16 -mt-16 opacity-50 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 bg-teal-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-teal-200">
+                            <i data-lucide="refresh-cw" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Digital Transformation</h3>
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            Drive operational excellence through our digital transformation services. We combine process automation, system modernization, and technology consulting services to enable efficient, agile operations.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-teal-600 font-semibold text-sm hover:gap-2 transition-all">
+                            Read More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ERP -->
+                <div class="relative group bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border border-slate-200 overflow-hidden card-hover animate-fade-up" style="transition-delay: 200ms;">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-orange-100 rounded-full -mr-16 -mt-16 opacity-50 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 bg-orange-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-orange-200">
+                            <i data-lucide="database" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Enterprise Resource Planning (ERP)</h3>
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            Streamline your operations with enterprise resource planning (ERP) services designed for your organization's unique needs. Our ERP consulting and implementation services ensure finance, supply chain, and sales integration.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-orange-600 font-semibold text-sm hover:gap-2 transition-all">
+                            Read More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all">
+                    Talk to an ICS Expert Today
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaborative Solutions -->
+    <section id="solutions" class="py-24 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-cyan-500 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 animate-fade-up">
+                <span class="inline-block px-4 py-1.5 bg-white/10 border border-white/20 rounded-full text-sm font-semibold mb-4">Microsoft Partnership</span>
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Collaborative Enterprise Solutions</h2>
+                <p class="text-lg text-slate-300 max-w-3xl mx-auto">We deploy leading enterprise platforms to unify workflows, enhance operational efficiency, and elevate customer engagement</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-6">
+                <!-- Dynamics 365 -->
+                <div class="glass-effect rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group animate-fade-up">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="layers" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Dynamics 365</h3>
+                            <p class="text-slate-300 leading-relaxed mb-4">
+                                A robust suite integrating CRM and ERP functionalities to streamline operations, optimize customer interactions, and improve business performance across departments.
+                            </p>
+                            <a href="#" class="inline-flex items-center text-cyan-400 font-semibold text-sm group-hover:gap-2 transition-all">
+                                Read More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Central -->
+                <div class="glass-effect rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group animate-fade-up" style="transition-delay: 100ms;">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="building" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Dynamics 365 Business Central</h3>
+                            <p class="text-slate-300 leading-relaxed mb-4">
+                                Cloud ERP designed for small and medium enterprises, enabling better financial oversight, supply chain management, sales, service, and project execution.
+                            </p>
+                            <a href="#" class="inline-flex items-center text-cyan-400 font-semibold text-sm group-hover:gap-2 transition-all">
+                                Read More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Power Platform -->
+                <div class="glass-effect rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group animate-fade-up">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="zap" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Microsoft Power Platform</h3>
+                            <p class="text-slate-300 leading-relaxed mb-4">
+                                This suite enables workflow automation, advanced analytics, and custom application development without extensive coding, empowering teams to make faster, data-driven decisions.
+                            </p>
+                            <a href="#" class="inline-flex items-center text-cyan-400 font-semibold text-sm group-hover:gap-2 transition-all">
+                                Read More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Microsoft 365 -->
+                <div class="glass-effect rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group animate-fade-up" style="transition-delay: 100ms;">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="globe" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Microsoft 365</h3>
+                            <p class="text-slate-300 leading-relaxed mb-4">
+                                Empowers organizations with an integrated productivity and collaboration environment, combining Office applications, enterprise-grade security, and cross-device functionality.
+                            </p>
+                            <a href="#" class="inline-flex items-center text-cyan-400 font-semibold text-sm group-hover:gap-2 transition-all">
+                                Read More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Commerce -->
+                <div class="glass-effect rounded-2xl p-8 lg:col-span-2 hover:bg-white/10 transition-all duration-300 group animate-fade-up" style="transition-delay: 200ms;">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="shopping-cart" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold mb-2">Dynamics 365 Commerce & Magento Commerce</h3>
+                            <p class="text-slate-300 leading-relaxed mb-4 max-w-3xl">
+                                Delivers enterprise e-commerce solutions and B2B e-commerce development services that seamlessly integrate physical and digital sales channels. Retailers can provide personalized customer journeys and drive measurable revenue growth through an omnichannel approach.
+                            </p>
+                            <a href="#" class="inline-flex items-center text-cyan-400 font-semibold text-sm group-hover:gap-2 transition-all">
+                                Read More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-flex items-center gap-2 px-8 py-4 bg-white text-slate-900 rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all">
+                    Talk to an ICS Expert Today
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries -->
+    <section id="industries" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-fade-up">
+                <span class="inline-block px-4 py-1.5 bg-emerald-100 text-emerald-700 rounded-full text-sm font-semibold mb-4">Sector Expertise</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-4">Industries We Serve</h2>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto">Our solutions are designed to address industry-specific challenges while generating measurable business outcomes</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Distribution -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 card-hover animate-fade-up">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="http://static.photos/industry/800x400/10" alt="Distribution" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-bold text-2xl">Distribution</div>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            Streamline inventory management, optimize order fulfillment, and enhance supply chain visibility using Dynamics 365 Business Central to support agile and efficient distribution operations.
+                        </p>
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            We provide custom solutions using Dynamics 365 Business Central to optimize inventory management, streamline order processing, and enhance supply chain visibility, ensuring efficient distribution operations for clients in this sector.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-emerald-600 font-semibold hover:gap-2 transition-all group">
+                            Read More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Building & Infrastructure -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 card-hover animate-fade-up" style="transition-delay: 100ms;">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="http://static.photos/construction/800x400/20" alt="Building and Infrastructure" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-bold text-2xl">Building & Infrastructure</div>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            Implement BIM-driven project management, resource tracking, and communication platforms to ensure cost-effective, timely project delivery.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-blue-600 font-semibold hover:gap-2 transition-all group">
+                            Read More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- E-commerce -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 card-hover animate-fade-up">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="http://static.photos/technology/800x400/30" alt="E-commerce" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-bold text-2xl">E-commerce</div>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            Deploy e-commerce design and development services that provide integrated sales channels, advanced personalization, and seamless digital shopping experiences.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-purple-600 font-semibold hover:gap-2 transition-all group">
+                            Read More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Manufacturing -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 card-hover animate-fade-up" style="transition-delay: 100ms;">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="http://static.photos/industry/800x400/40" alt="Manufacturing" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-bold text-2xl">Manufacturing</div>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            Enable end-to-end operational efficiency through Dynamics 365 and Microsoft 365, improving production planning, resource allocation, and quality assurance. Every solution is purpose-built to overcome operational challenges, deliver measurable value, and support sustainable growth.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-orange-600 font-semibold hover:gap-2 transition-all group">
+                            Read More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose ICS -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-fade-up">
+                <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-4">Why Choose ViaTechnology?</h2>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto">ViaTechnology redefines the standard for end-to-end IT and engineering solutions by combining expertise, innovation, and strategic insight</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <!-- Innovate -->
+                <div class="text-center p-8 bg-gradient-to-b from-blue-50 to-white rounded-2xl border border-blue-100 animate-fade-up">
+                    <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-blue-200 transform rotate-3">
+                        <i data-lucide="lightbulb" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Innovate</h3>
+                    <p class="text-slate-600 font-semibold mb-2">Future-Ready Solutions</p>
+                    <p class="text-slate-500 text-sm leading-relaxed">
+                        We craft forward-looking strategies and implement advanced technologies that ensure businesses remain competitive and ahead of industry trends.
+                    </p>
+                </div>
+
+                <!-- Collaborate -->
+                <div class="text-center p-8 bg-gradient-to-b from-cyan-50 to-white rounded-2xl border border-cyan-100 animate-fade-up" style="transition-delay: 100ms;">
+                    <div class="w-16 h-16 bg-cyan-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-cyan-200 transform -rotate-3">
+                        <i data-lucide="users" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Collaborate</h3>
+                    <p class="text-slate-600 font-semibold mb-2">Strategic Growth</p>
+                    <p class="text-slate-500 text-sm leading-relaxed">
+                        ViaTechnology partners closely with organizations to enhance operational efficiency, improve decision-making, and support scalable, long-term growth.
+                    </p>
+                </div>
+
+                <!-- Transform -->
+                <div class="text-center p-8 bg-gradient-to-b from-purple-50 to-white rounded-2xl border border-purple-100 animate-fade-up" style="transition-delay: 200ms;">
+                    <div class="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-purple-200 transform rotate-3">
+                        <i data-lucide="trending-up" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Transform</h3>
+                    <p class="text-slate-600 font-semibold mb-2">End-to-End Excellence</p>
+                    <p class="text-slate-500 text-sm leading-relaxed">
+                        From initial concept to final delivery, we provide high-quality, cost-effective solutions that facilitate complete business transformation.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-slate-900 rounded-3xl p-8 md:p-12 text-white animate-fade-up">
+                <div class="text-center mb-10">
+                    <p class="text-lg text-slate-300">With over two decades of experience, our approach guarantees:</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-blue-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">Top Technology Services</h4>
+                            <p class="text-slate-400 text-sm">Access to cutting-edge engineering, design, and enterprise tools that drive innovation and operational excellence.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-full bg-cyan-500/20 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-cyan-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">Best Service Delivery</h4>
+                            <p class="text-slate-400 text-sm">Commitment to timely, reliable, and high-quality execution on every project.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-purple-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">Best Value Offerings</h4>
+                            <p class="text-slate-400 text-sm">A value-driven model designed to maximize return on investment while meeting business objectives.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-24 bg-gradient-to-br from-slate-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="animate-fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">What You Get with ViaTechnology: Advancing Your Business Potential</h2>
+                    <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                        Experience a transformative approach to project delivery and enterprise operations. ICS empowers businesses to consistently exceed expectations by delivering high-quality results faster, safer, and more profitably.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 text-white">
+                                <i data-lucide="rocket" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900 mb-2">Fuel Business Growth</h3>
+                                <p class="text-slate-600 leading-relaxed">Enhance internal capabilities, take on high-value projects, and accelerate organizational growth through strategic guidance and support from ICS. Our solutions help reduce dependency on additional staff while improving overall operational efficiency.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-cyan-600 rounded-xl flex items-center justify-center flex-shrink-0 text-white">
+                                <i data-lucide="award" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900 mb-2">Leverage Industry Expertise</h3>
+                                <p class="text-slate-600 leading-relaxed">Benefit from with ViaTechnology's thought leadership, deep industry knowledge, and structured methodologies to elevate project performance. Access proven best practices, comprehensive transformation roadmaps, and insights that enable your organization to navigate evolving market conditions with confidence.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative animate-fade-up" style="transition-delay: 200ms;">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-3xl opacity-20 blur-xl"></div>
+                    <div class="relative bg-white rounded-2xl shadow-2xl p-8 border border-slate-100">
+                        <div class="text-center mb-8">
+                            <div class="w-20 h-20 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                                <i data-lucide="message-circle" class="w-10 h-10 text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-900">Ready to Transform?</h3>
+                            <p class="text-slate-600 mt-2">We combine engineering, CAD, and technology expertise to tackle your most challenging projects.</p>
+                        </div>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-center gap-3 text-slate-600">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 flex-shrink-0"></i>
+                                <span class="text-sm">Precision-engineered solutions</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-slate-600">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 flex-shrink-0"></i>
+                                <span class="text-sm">Scalable enterprise architecture</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-slate-600">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 flex-shrink-0"></i>
+                                <span class="text-sm">Reliable project delivery</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-slate-600">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 flex-shrink-0"></i>
+                                <span class="text-sm">Measurable business results</span>
+                            </div>
+                        </div>
+
+                        <a href="#contact" class="block w-full text-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all">
+                            Talk to an ViaTechnlogyExpert Today
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section id="contact" class="py-24 bg-slate-900 relative overflow-hidden">
+        <div class="absolute inset-0">
+            <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Ready to Start Your Transformation on ViaTechnology?</h2>
+            <p class="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
+                Our solutions are designed to be precise, scalable, and reliable, helping you achieve measurable results.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="mailto:contact@icstechservices.com" class="px-8 py-4 bg-white text-slate-900 rounded-full font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                    Email Our Team
+                </a>
+                <a href="tel:+1234567890" class="px-8 py-4 glass-effect text-white rounded-full font-semibold text-lg hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2">
+                    <i data-lucide="phone" class="w-5 h-5"></i>
+                    Call Now
+                </a>
+            </div>
+
+            <div class="mt-12 pt-12 border-t border-white/10 grid sm:grid-cols-3 gap-8 text-center">
+                <div>
+                    <div class="text-blue-400 font-semibold mb-1">Email</div>
+                    <div class="text-slate-300">viateurirasubiza@gmail.com</div>
+                </div>
+                <div>
+                    <div class="text-blue-400 font-semibold mb-1">Phone</div>
+                    <div class="text-slate-300">0794476085</div>
+                </div>
+                <div>
+                    <div class="text-blue-400 font-semibold mb-1">Location</div>
+                    <div class="text-slate-300">Rwanda,Rubavu</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center text-white font-bold shadow-lg">
+                            
+                        </div>
+                        <span class="font-bold text-white text-lg">Viateur Technology Services</span>
+                    </div>
+                    <p class="text-sm leading-relaxed max-w-sm">
+                        Integrated Engineering & Technology Solutions for Next-Level Business Performance. Precision, innovation, and efficiency powering enterprises toward measurable growth.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#engineering" class="hover:text-white transition-colors">Engineering Design</a></li>
+                        <li><a href="#technology" class="hover:text-white transition-colors">IT Services</a></li>
+                        <li><a href="#solutions" class="hover:text-white transition-colors">Cloud Solutions</a></li>
+                        <li><a href="#industries" class="hover:text-white transition-colors">Industry Solutions</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Case Studies</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm">© 2026 ViateurTechnology Services Private Limited. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth Scroll Animation Observer
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-fade-up').forEach((el) => observer.observe(el));
+
+        // Navbar Background on Scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+    </script>
+<script src="https://deepsite.hf.co/deepsite-badge.js"></script>
+</body>
+</html>
