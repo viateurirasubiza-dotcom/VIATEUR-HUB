@@ -20,6 +20,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+	<!-- WhatsApp Floating Button -->
+<a href="#" class="wa-btn" onclick="toggleChat()">
+
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <path fill="white" d="M16 3C9.37 3 4 8.37 4 15c0 2.61.84 5.02 2.27 6.98L5 29l7.23-1.19C14.02 28.58 15 29 16 29c6.63 0 12-5.37 12-12S22.63 3 16 3zm0 22c-.9 0-1.78-.14-2.62-.41l-.19-.06-4.29.71.72-4.18-.12-.2C8.44 19.78 8 17.43 8 15c0-4.42 3.58-8 8-8s8 3.58 8 8-3.58 10-8 10z"/>
+    </svg>
+
+</a>
+<!-- Chat Popup -->
+<div class="wa-chat" id="waChat">
+    <div class="wa-header">
+        💬 Chat with us
+        <span onclick="toggleChat()">✖</span>
+    </div>
+
+    <div class="wa-body">
+        <p>Muraho 👋<br>Ushaka ubufasha kuri VIATEUR HUB?</p>
+    </div>
+
+    <a class="wa-send"
+       href="https://wa.me/250788123456?text=Muraho%20ndashaka%20amakuru%20kuri%20VIATEUR%20HUB"
+       target="_blank">
+        Ohereza kuri WhatsApp
+    </a>
+</div>
     <script>
         tailwind.config = {
             theme: {
@@ -99,6 +124,121 @@ p {
 .card p:last-child {
 	margin-bottom: 0;
 }
+		/* =========================
+   FLOATING WHATSAPP BUTTON
+========================= */
+.wa-btn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 65px;
+    height: 65px;
+    background: #25D366;
+    border-radius: 50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:9999;
+    box-shadow:0 6px 15px rgba(0,0,0,0.25);
+    cursor: pointer;
+    transition: 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.wa-btn:hover{
+    transform: scale(1.15);
+    background: #128C7E;
+}
+
+/* WhatsApp ICON */
+.wa-btn svg{
+    width: 38px;
+    height: 38px;
+    fill: white; /* ✔️ IMPORTANT FIX */
+}
+
+/* =========================
+   PULSE ANIMATION
+========================= */
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* =========================
+   CHAT BOX
+========================= */
+.wa-chat{
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 280px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    display: none;
+    overflow: hidden;
+    z-index:9999;
+    animation: slideUp 0.3s ease;
+}
+
+/* Chat animation */
+@keyframes slideUp{
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* =========================
+   CHAT HEADER
+========================= */
+.wa-header{
+    background:#25D366;
+    color:white;
+    padding:12px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-weight: bold;
+}
+
+/* =========================
+   CHAT BODY
+========================= */
+.wa-body{
+    padding:12px;
+    font-size:14px;
+    color:#333;
+}
+
+/* =========================
+   SEND BUTTON
+========================= */
+.wa-send{
+    display:block;
+    text-align:center;
+    background:#128C7E;
+    color:white;
+    padding:12px;
+    text-decoration:none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.wa-send:hover{
+    background:#0d6b5f;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 480px){
+    .wa-chat{
+        width: 90%;
+        right: 5%;
+    }
+}
+		
     </style>
 </head>
 <body class="font-sans text-slate-800 bg-slate-50 antialiased">
